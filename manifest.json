@@ -1,0 +1,18 @@
+{
+    "manifest_version": 3,
+    "name": "Refresh Tab",
+    "version": "1.0",
+    "permissions": [
+        "activeTab",
+        "tabs",
+        "alarms"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_icon": {
+          "128": "extensionIconToggleOff128x128.png"
+        }
+    }
+}
