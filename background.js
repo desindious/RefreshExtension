@@ -36,7 +36,11 @@ chrome.alarms.onAlarm.addListener((alarm) => {
     if (alarm.name === "refresh") {
         // chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
         chrome.tabs.query({ url: "https://www.youtube.com/*" }, (tabs) => {
-                chrome.tabs.reload(tabs[0].id);
+                // chrome.tabs.reload(tabs[0].id);
+                for (const singleTab of tabs){
+                    chrome.tabs.reload(singleTab.id);
+                    // console.log(singleTab.id)
+                };
         });
     }
 });
